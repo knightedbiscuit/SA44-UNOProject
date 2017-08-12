@@ -79,16 +79,17 @@ export class UNODeck {
         }
     }
 
-    public shuffle(): void {
-        let temp: Card;
-        let randNum: number;
-        for (let n = 0; n < this.cardList.length; n++) {
-            temp = this.cardList[n];
-            randNum = Math.floor(Math.random()*(this.cardList.length-1 -(0))+(0));
-            this.cardList[n] = this.cardList[randNum];
-            this.cardList[randNum];
+    public shuffle(times: number): void {
+        for (let c = 0; c < times; c++) {
+            let temp: Card;
+            let randNum: number;
+            for (let n = 0; n < this.cardList.length; n++) {
+                temp = this.cardList[n];
+                randNum = Math.floor(Math.random() * (this.cardList.length - 1 - (0)) + (0));
+                this.cardList[n] = this.cardList[randNum];
+                this.cardList[randNum] = temp;
+            }
         }
-
     }
 
     public take(): Card {

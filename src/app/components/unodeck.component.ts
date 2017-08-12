@@ -20,7 +20,7 @@ export class UnodeckComponent implements OnInit {
   }
   public showHand() {
     this.deck = new UNODeck();
-    this.deck.shuffle();
+    this.deck.shuffle(5);
 
     for (let i = 0; i < this.players; i++) {
       this.p = new Player();
