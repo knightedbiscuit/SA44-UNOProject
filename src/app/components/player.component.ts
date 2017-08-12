@@ -11,25 +11,26 @@ export class PlayerComponent implements OnInit {
   @Input() counter: number;
 
   ngOnInit() {
-    this.counter=0;
+    this.counter=2;
   }
 
   public increment(): void
   {
-    this.counter++;
     if(this.counter==7)
       {
-        stop();
+        return;
       }
+    this.counter++;
     console.log("Count is %d", this.counter);
   }
 
   public decrement():void{
-    this.counter--;
-    if(this.counter<0)
+
+    if(this.counter<=2)
       {
-        stop();
+        return;
       }
+    this.counter--;
     console.log("Count is %d", this.counter);
   }
 

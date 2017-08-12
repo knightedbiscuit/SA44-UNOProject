@@ -9,7 +9,7 @@ import { PlayerComponent } from './components/player.component';
   declarations: [
     AppComponent,
     PlayerComponent,
-    UnodeckComponent
+    UnodeckComponent,
   ],
   imports: [
     BrowserModule

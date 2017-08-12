@@ -1,3 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<app-player></app-player>
+ <button type="button" (click)="increment()">Add</button> <button type="button" (click)="decrement()">Remove</button>
+<p><code>{{counter}} Players</code></p> 
 
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <app-player "playerCount"=[ counter]></app-player> -->
+<app-unodeck [players]="counter"></app-unodeck>
